@@ -2,6 +2,8 @@ name: Docker-Image-Dev
 on: 
   push:
     branches: [ main ]
+    paths:
+      - 'orig/Dockerfile'
   workflow_dispatch:
 
 jobs:
