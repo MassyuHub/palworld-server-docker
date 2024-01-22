@@ -1,11 +1,12 @@
 services:
    palworld:
       image: ghcr.io/massyuhub/palworld-server-docker:latest
+      command: /home/steam/Steam/steamapps/common/PalServer/PalServer.sh -adminpassword=azarashi01
       restart: unless-stopped
       container_name: palworld-server
       ports:
         - 1985:1985/tcp
         - 8211:8211/udp
         - 27015:27015/udp
-      volumes:
-         - ./palworld:/home/steam/Steam/steamapps/common/PalServer/Pal/Saved
+      # volumes:
+      #    - ./palworld:/home/steam/Steam/steamapps/common/PalServer/Pal/Saved
